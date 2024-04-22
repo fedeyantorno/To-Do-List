@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+
+    --white-UI: #eff0f3;
+    --green-light-UI: #abd1c6;
+    --orange-UI: #f9bc60;
+    --red-light-UI: #e16162;
+    --green-medium-UI: #004643;
+    --green-dark-UI: #002e2c;
+}
+
+body {
+    /* background: linear-gradient(to bottom, var(--purple), var(--blue-light)); */
+    background-color: var(--green-medium-UI);
+    height: 100vh;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* --Encabezado-- */
+
+.header h1 {
+    color: var(--white);
+}
+
+.header span {
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+#date {
+    color: var(--white);
+    letter-spacing: 1px;
+    padding: 50px 0 5px 0;
+}
+
+
+/* --Agregar tarea-- */
+
+.add-task {
+    background-color: var(--white);
+    border-radius: 8px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    margin: 40px 0;
+    filter: drop-shadow( 3px 3px 8px var(--green-dark-UI))
+}
+
+.add-task input {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--white);
+}
+
+.add-task input::placeholder {
+    font-size: 1.1rem;
+    color: var(--red-light-UI);
+}
+
+.add-task input[type=text] {
+    font-size: 1.1rem;
+    color: var(--red-light-UI);
+}
+
+.add-task input:focus {
+    outline: none;
+}
+
+.add-task i {
+    font-size: 30px;
+    color: var(--red-light-UI);
+}
+
+.add-task i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* --Lista de tareas-- */
+
+.tasks-section h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.tasks-section li {
+    /* background: linear-gradient(to bottom, var(--blue-dark), var(--blue-light) ); */
+    background-color: var(--green-light-UI);
+    border-radius: 8px;
+    color: var(--green-medium-UI);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    filter: drop-shadow( 3px 3px 8px var(--green-dark-UI))  
+}
+
+.tasks-section i {
+    font-size: 1.3rem;
+}
+
+.tasks-section i:hover {
+    color: var(--blue-light);
+    cursor: pointer;
+}
+
+.tasks-section > ul p {
+    font-size: 1.2rem;
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: var(--red-light-UI);
+}
