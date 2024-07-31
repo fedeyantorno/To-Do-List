@@ -2,8 +2,8 @@ const date = document.querySelector('#date');
 const input = document.querySelector('#input');
 const list = document.querySelector('#list');
 const btnEnter = document.querySelector('#btn-enter');
-const check = 'fa-check-circle';
-const uncheck = 'fa-circle';
+const check = 'fa-check-circle-o';
+const uncheck = 'fa-circle-o';
 const lineThrough = 'line-through';
 let id;
 let listDB;
@@ -62,9 +62,9 @@ function addTask(task, id, done, remove) {
 
     const newTask = `
                 <li id="list-element" data="element">
-                    <i class="fa-regular ${doneState}" data="done" id="${id}"></i>
+                    <i class="fa ${doneState}" data="done" id="${id}"></i>
                     <p class="text ${lineState}">${task}</p>
-                    <i class="fa-light fa-trash-can" data="remove" id="${id}"></i>
+                    <i class="fa fa-trash" data="remove" id="${id}"></i>
                 </li>
                 `;
     list.insertAdjacentHTML("beforeend", newTask);
